@@ -3,3 +3,6 @@
 
 # auto-generated library folders
 node_modules/
+
+# auto-generated project folders
+build/
