@@ -1,15 +1,20 @@
 {
   "name": "survivejs-kanban-app",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rbose85/survivejs-kanban-app.git"
+  },
+  "description": "A tutorial in `webpack` abd `React`",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Rajiv Bose <rbose85@users.noreply.github.com>",
+  "licenses": "MIT",
   "devDependencies": {
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^1.7.0",
