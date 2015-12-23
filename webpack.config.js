@@ -1,5 +1,6 @@
 var path = require('path');
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 const PATHS = {
     app: path.join(__dirname, 'app'),
@@ -12,7 +13,21 @@ module.exports = {
         path: PATHS.build,
         filename: 'bundle.js'
     },
+    devServer: {
+        historyApiFallback: true,
+        hot: true,
+        inline: true,
+        progress: true,
+
+        // display only errors to reduce the amount of output
+        stats: 'errors-only',
+
+        // parse host and port from env so this is easy to customise
+        host: process.env.HOST,
+        port: process.env.PORT
+    },
     plugins: [
-        new HtmlwebpackPlugin({title: 'Kanban App'})
+        new HtmlwebpackPlugin({title: 'Kanban App'}),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
